@@ -1,0 +1,99 @@
+.main {
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 110px;
+  padding: 15px 20px 10px;
+  background:rgba(0,0,0,0.8);
+  font-size: 22px;
+  line-height: 36px;
+  color: #ccc;
+  transform: translateY(0px);
+  .optionName {
+    font-size: 28px;
+    color: #fff;
+    .odds {
+      margin: 0 10px;
+    }
+    .oddsChange {
+      .odds {
+        background: red;
+        padding: 0 4px;
+      }
+      .oddsChangeText {
+        display: inline-block;
+      }
+    }
+    .oddsChangeText {
+      font-size: 22px;
+      color: #fd8889;
+      display: none;
+    }
+  }
+  .delete {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    margin-top: -20px;
+  }
+}
+
+.mainAnimate {
+  transform: translateY(8px);
+  transition: all .2s;
+}
+
+.footer {
+  font-size: 20px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  .footer_odds {
+    padding: 14px 20px 0 20px;
+    .footer_tipText {
+      margin-left: 15px;
+      margin-top: 4px;
+      color: #999999;
+    }
+  }
+  .footer_show {
+    width: 215px;
+    height: 110px;
+    .footer_content {
+      line-height: normal;
+      height: 100%;
+      .footer_content_text {
+        font-size: 30px;
+        line-height: 42px;
+        color: #fff;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      .footer_content_desc {
+        font-size: 20px;
+        line-height: 26px;
+        color: #ffffff;
+        opacity: 0.5;
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    :global {
+      .am-button {
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        background: #e82c2c;
+        color: #fff;
+        text-align: center;
+      }
+      .am-button-disabled {
+        background: #ccc;
+      }
+    }
+  }
+}

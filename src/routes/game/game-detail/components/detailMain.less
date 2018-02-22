@@ -1,0 +1,48 @@
+.listBox {
+  width: 100%;
+  .listBox_panel {
+    padding-top: 10px;
+    background-color: #fff;
+    :global {
+      .am-accordion-header {
+        padding: 0 60px 0 20px;
+        font-size: 26px;
+        line-height: 56px;
+        height: auto;
+      }
+      .am-accordion-header i {
+        top: 50%;
+        margin-top: -12px;
+        width: 24px;
+        height: 24px;
+      }
+      .am-accordion-header:after {
+        border: none;
+      }
+      .am-accordion .am-accordion-item .am-accordion-content .am-accordion-content-box:after {
+        border-bottom: 1px #eee solid;
+      }
+    }
+
+    .content {
+      padding: 10px 20px 0;
+      :global {
+        .am-flexbox-item {
+          margin-bottom: 20px;
+        }
+      }
+      .row {
+        display: flex;
+        flex-direction: column;
+        :global{
+          .am-flexbox-item{
+            width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+

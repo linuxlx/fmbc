@@ -1,0 +1,74 @@
+{
+  "orderStatus": {
+    "1": "支付成功",
+    "2": "订单成功",
+    "3": "订单失败",
+    "4": "订单待审核",
+    "5": "订单已审核",
+    "6": "订单待确认",
+    "7": "订单已确认"
+  },
+  "winStatus": {
+    "0": "等待开奖",
+    "1": "已$t(types:winType.{{showType}})",
+    "2": "取消返还",
+    "3": "走盘返还",
+    "4": "赢半",
+    "5": "输半",
+    "6": "未$t(types:winType.{{showType}})"
+  },
+  "sportType": {
+    "0": "篮球",
+    "1": "足球",
+    "99": "电竞",
+    "-9": "自主玩法"
+  },
+  "handicapType": {
+    "-1": "（赛前盘）",
+    "0": "（走地盘）"
+  },
+  "detail": {
+    "orderStatus": "订单状态",
+    "orderId": "订单编号",
+    "betTime": "$t(types:type.{{showType}})时间",
+    "playType": "游戏类型",
+    "handicap": "盘口",
+    "playResult": "赛果"
+  },
+  "tabCardTitle": {
+    "leftTitle": "$t(types:waitType.{{showType}})订单",
+    "rightTitle": "$t(types:overType.{{showType}})订单"
+  },
+  "loadText": {
+    "loadMore": "加载更多",
+    "noData": "无更多数据"
+  },
+  "progressStatus": {
+    "1": "支付成功",
+    "2": "订单成功",
+    "3": "订单失败",
+    "4": "订单待审核",
+    "5": "订单已审核",
+    "6": "订单待确认",
+    "7": "订单已确认",
+    "8": "订单取消",
+    "10": "未$t(types:winType.{{showType}})",
+    "11": "已$t(types:winType.{{showType}})",
+    "descriptionTitle": {
+      "cancel": "取消原因",
+      "fail": "订单状态"
+    }
+  },
+  "headerHostText": {
+    "basketball": "[客]"
+  },
+  "restitution": "返还",
+  "failCause": {
+    "3": "订单失败",
+    "5": "订单已审核",
+    "7": "订单已确认",
+    "8": "取消原因"
+  }
+}
+
+

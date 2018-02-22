@@ -1,0 +1,26 @@
+.title{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    color: #fff!important;
+    text-align: center;
+    line-height: 80px;
+    background:#E82C2C url('../../assets/modelbg.png') center repeat-y;
+    background-size: 100%;
+}
+.title>span{
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    background: #fff;
+    color: #E82C2C;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    
+}

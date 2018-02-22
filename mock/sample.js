@@ -1,0 +1,21 @@
+import _ from 'lodash'
+
+export default {
+  // 支持值为 Object 和 Array
+  'GET /mock/users': { users: [1, 2] },
+
+  // GET POST 可省略
+  '/mock/users/1': { id: 1 },
+
+  // 支持自定义函数，API 参考 express@4
+  'POST /mock/users/create': (req, res) => { res.end(JSON.stringify(req.body)) },
+
+  // Forward 到另一个服务器
+  'GET /assets/*': 'https://assets.online/',
+
+  // Forward 到另一个服务器，并指定子路径
+  // 请求 /someDir/0.0.50/index.css 会被代理到 https://g.alicdn.com/tb-page/taobao-home, 实际返回 https://g.alicdn.com/tb-page/taobao-home/0.0.50/index.css
+
+  // 会被roadhog里面的proxy覆盖
+  'GET /api/(.*)': 'http://jsonplaceholder.typicode.com/',
+};

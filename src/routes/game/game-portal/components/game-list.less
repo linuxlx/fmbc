@@ -1,0 +1,91 @@
+.wrapper {
+  position: absolute;
+  left: 166px;
+  right: 0;
+
+  flex: 1;
+  color: #999;
+  height: 100%;
+  background-color: #fff;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .loading {
+    margin-top: 100px;
+  }
+
+  li {
+    //height: 190px;
+    padding: 20px;
+    border-bottom: 1px solid #ececec;
+
+    .header {
+      position: relative;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      line-height: 30px;
+
+      span.leaguName {
+        position: absolute;
+        width: 50%;
+        text-align: left;
+      }
+
+      span.status {
+        margin: 0 auto;
+        width: 100%;
+        display: block;
+      }
+
+      span.status.rolling {
+        color: green;
+      }
+
+      span.status.pending {
+        color: #5880e3;
+      }
+    }
+
+    .content {
+      height: 120px;
+      display: flex;
+      justify-content: space-between;
+
+      .teams {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 21px 0 5px;
+
+        font-size: 28px;
+        color: #333;
+        .team {
+          line-height: 35px;
+          text-align: left;
+
+          img {
+            margin-right: 10px;
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+
+      .participants {
+        height: 120px;
+        padding: 5px 0;
+        display: flex;
+        align-items: center;
+
+        color: #999;
+        font-size: 20px;
+      }
+    }
+  }
+  .sum {
+    padding: 0 24px;
+    color: #f05f58;
+  }
+}

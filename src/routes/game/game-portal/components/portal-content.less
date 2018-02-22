@@ -1,0 +1,71 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+  background-color: white;
+  margin-top: 20px;
+  height: 100%;
+
+  .clear-fix {
+    clear: both;
+  }
+  .tabs {
+    flex: 1;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    :global {
+      .am-tabs-content {
+        flex: 1;
+        position: relative;
+        .am-tabs-tabpane {
+          display: flex;
+          align-items: stretch;
+          position: absolute;
+        }
+        .am-tabs-tabpane:last-child {
+          transform: translateX(100%) translateZ(0px);
+        }
+      }
+
+      .am-tabs-bar {
+        border-bottom: 1px solid #ececec;
+      }
+      .am-tabs-ink-bar {
+        background-color: #e82c2c;
+      }
+      .am-tabs-tab {
+        width: 140px;
+        display: inline-block;
+        color: #999;
+        font-size: 26px;
+        line-height: 70px;
+        height: 70px;
+        flex: inherit;
+        border-bottom: none;
+      }
+      .am-tabs-tab-active {
+        color: #e82c2c;
+      }
+      .am-tabs-content, .am-tabs-tabpane {
+        height: 100%;
+      }
+
+      .am-tabs-tabpane {
+        position: relative;
+      }
+    }
+  }
+
+  .one-of-tab-content {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: stretch;
+  }
+
+}

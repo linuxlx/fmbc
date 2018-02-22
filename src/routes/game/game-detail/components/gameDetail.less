@@ -1,0 +1,81 @@
+.wrap {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  :global {
+    .am-carousel-wrap-dot > span {
+      background: #fff;
+      opacity: 0.4;
+      width: 12px;
+      height: 4px;
+      border-radius: 2px;
+    }
+    .am-carousel-wrap-dot-active > span {
+      opacity: 1;
+    }
+  }
+
+  &.error {
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 36px;
+      color: #999;
+    }
+  }
+  &.loading {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.main {
+  width: 640px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+.carouselBox {
+  width: 100%;
+  background-size: cover;
+  &.basketball {
+    background-image: url(../../../../assets/bg.jpg);
+  }
+  &.football {
+    background-image: url(../../../../assets/footballbg.jpg);
+  }
+  &_item {
+    height: 256px;
+  }
+}
+
+.footer {
+  width: 640px;
+  margin: 0 !important;
+  .footer_betContent{
+    position: relative;
+  }
+  &_header {
+    padding: 10px 20px;
+  }
+  &_footer {
+    height: 110px;
+  }
+
+}
+
+.closeModal {
+  :global {
+    .am-modal-content {
+      padding-top: 0 !important;
+      background: none;
+    }
+    .am-modal-body {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.wrap{
+  position: relative;
+  .action {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    top:0;
+    padding: 10px 34px 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    :global {
+      .am-button {
+        width: 34px;
+        height: 34px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px rgba(255, 255, 255, 0.3) solid;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .am-icon{
+          display: block;
+          width: 28px;
+          height: 28px;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+.main {
+  height: 256px;
+  color: #fff;
+  .body {
+    margin-left: 34px;
+    .cardLeft {
+      width: 90px;
+      .item {
+        width: 70px;
+        min-height: 34px;
+        line-height: 34px;
+        padding: 10px;
+      }
+    }
+    .cardRight {
+      width: 516px;
+      overflow: hidden;
+      :global {
+        .am-flexbox {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+
+  .teamHome, .teamGuest {
+    width: 70px;
+    height: 34px;
+    display: block;
+    line-height: 34px;
+    text-align: center;
+    &:before {
+      content: '';
+      width: 70px;
+      height: 34px;
+      transform: skewX(160deg) translateX(-10px);
+      display: inline-block;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  .teamHome {
+    &:before {
+      background: #df4c4f;
+    }
+  }
+  .teamGuest {
+    &:before {
+      background: #3976c6;
+    }
+  }
+}

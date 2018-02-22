@@ -1,0 +1,98 @@
+.button {
+  font-size: 24px;
+  line-height: 30px;
+  height: auto;
+  padding: 14px 10px 16px;
+  border: 2px #dbdbdb solid;
+  border-radius: 8px;
+  white-space: normal;
+  .main {
+    text-align: center;
+    width: 100%;
+    .title {
+      color: #333;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 36px;
+    }
+    .describe {
+      color: #999;
+      font-size: 20px;
+      line-height: 24px;
+      .odds {
+        position: relative;
+      }
+      .tendency {
+        position: absolute;
+        margin: 2px 0 0 8px;
+        .up, .down {
+          width: 20px;
+          height: 20px;
+        }
+        .up {
+          color: #e52f34;
+        }
+        .down {
+          color: green;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  &.selected {
+    border: 2px #e52f34 solid;
+    .title, .describe {
+      color: #e52f34;
+    }
+  }
+
+  &.disabled {
+    border: 2px #dbdbdb solid;
+    background-color: #f7f7f7;
+    .title, .describe {
+      color: #ccc;
+    }
+  }
+}
+
+.wrap {
+  :global {
+    .am-button.am-button-active {
+      background-color: transparent;
+    }
+
+  }
+}
+
+.row {
+  .button {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 16px 10px;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    .title {
+      flex: 1;
+      text-align: left;
+      white-space: normal;
+    }
+    .odds {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding-right: 20px;
+      .tendency {
+        right: 0;
+        height: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        margin: 0;
+      }
+    }
+  }
+}
+

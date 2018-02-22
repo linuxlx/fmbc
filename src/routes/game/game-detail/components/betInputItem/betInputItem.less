@@ -1,0 +1,42 @@
+.main {
+  border-radius: 10px;
+  border: 1px #ccc solid;
+  .input {
+    font-size: 20px;
+    padding: 10px 16px;
+    line-height: 28px;
+    .text {
+      color: #999999;
+    }
+    .count {
+      color: #333333;
+      .input_box {
+        min-width: 11px;
+        display: inline-block;
+        vertical-align: top;
+        height: 28px;
+        box-sizing: border-box;
+        border-bottom: 1px #333333 solid;
+      }
+      .defaultCount {
+      }
+    }
+  }
+  .button {
+    min-width: 140px;
+    height: 48px;
+    text-align: center;
+    line-height: normal;
+    font-size: 22px;
+    border: none;
+    border-radius: 0;
+    background: #f3ae31;
+    color: #fff;
+    .button_span {
+      height: 100%;
+    }
+  }
+  :global(.am-button-disabled) {
+    background: #ccc;
+  }
+}

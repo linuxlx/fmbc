@@ -1,0 +1,283 @@
+{
+  "teamHome": "主队",
+  "teamGuest": "客队",
+  "errorTip": "服务器出错了！维修中~~",
+  "playingInstructions": "玩法说明",
+  "matchStatus": {
+    "not_the_start": "未开赛",
+    "in_the_game": "比赛中",
+    "game_over": "比赛结束",
+    "game_pause": "比赛暂停",
+    "half_time": "中场休息"
+  },
+  "period": {
+    "list": [
+      "全场",
+      "第一节",
+      "第二节",
+      "第三节",
+      "第四节",
+      "上半场",
+      "下半场",
+      "加时"
+    ],
+    "length": 8
+  },
+  "basketballLive": [
+    "第一节",
+    "第二节",
+    "半场",
+    "第三节",
+    "第四节",
+    "加时"
+  ],
+  "footballMapping": {
+    "FTRFSF": [
+      {
+        "exampleDescript": "派奖结果=90分钟赛果(含伤停补时)",
+        "playNameDescription": [
+          {
+            "name": "平手盘：主队 0，主队不让球：",
+            "detail": [
+              "派奖结果为主胜：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})任何选项均退还$t(types:type.{{showType}})本金",
+              "派奖结果为客胜：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢"
+            ]
+          },
+          {
+            "name": "主让平/半球：主队 -0.25（即-0/0.5），客队+0.25（即+0/0.5）",
+            "detail": [
+              "派奖结果为主胜：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})主队退还一半本金(输半)，$t(types:type.{{showType}})客队(赢半) 奖金=(本金÷2×赔率)+(本金÷2）",
+              "派奖结果为客胜：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢"
+            ]
+          },
+          {
+            "name": "主让半球：主队 -0.5，客队+0.5",
+            "detail": [
+              "派奖结果为主胜：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢",
+              "派奖结果为主负：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢"
+            ]
+          },
+          {
+            "name": "主让半/一球：主队 -0.75（即-0.5/1），客队+0.75（即+0.5/1）",
+            "detail": [
+              "派奖结果为主队净胜1球以上：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢",
+              "派奖结果为主负：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢",
+              "派奖结果为主队净胜1球：$t(types:type.{{showType}})主队（赢半） 奖金=(本金÷2×赔率)+(本金÷2），$t(types:type.{{showType}})客队退还一半本金（输半）"
+            ]
+          }
+        ]
+      },
+      {
+        "exampleDescript": "派奖结果=90分钟赛果(含伤停补时) - $t(types:type.{{showType}})时刻比分。例：$t(types:type.{{showType}})时比分1:0，最终比分3:1，让球胜负派奖结果为2:1",
+        "playNameDescription": [
+          {
+            "name": "平手盘：主队 0，主队不让球：",
+            "detail": [
+              "派奖结果为主胜：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})任何选项均退还$t(types:type.{{showType}})本金",
+              "派奖结果为客胜：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢"
+            ]
+          },
+          {
+            "name": "主让平/半球：主队 -0.25（即-0/0.5），客队+0.25（即+0/0.5）",
+            "detail": [
+              "派奖结果为主胜：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})主队退还一半本金(即输半)，$t(types:type.{{showType}})客队(赢半)   奖金=(本金÷2×赔率)+(本金÷2）",
+              "派奖结果为客胜：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢"
+            ]
+          },
+          {
+            "name": "主让半球：主队 -0.5，客队+0.5",
+            "detail": [
+              "派奖结果为主胜：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢",
+              "派奖结果为主负：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢"
+            ]
+          },
+          {
+            "name": "主让半/一球：主队 -0.75（即-0.5/1），客队+0.75（即+0.5/1）",
+            "detail": [
+              "派奖结果为主队净胜1球以上：$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+              "派奖结果为平局：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢",
+              "派奖结果为主负：$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢",
+              "派奖结果为主队净胜1球：$t(types:type.{{showType}})主队（赢半） 奖金=(本金÷2×赔率)+(本金÷2），$t(types:type.{{showType}})客队退还一半本金（输半）"
+            ]
+          }
+        ]
+      }
+    ],
+    "FTDXQ": {
+      "exampleDescript": "派奖结果=90分钟(含伤停补时)主队进球数+客队进球数。",
+      "playNameDescription": [
+        {
+          "name": "预设总进球数 0.25 （即0/0.5）：",
+          "detail": [
+            "派奖结果为0：",
+            "$t(types:type.{{showType}})大于0.25退还一半本金（即输半）",
+            "$t(types:type.{{showType}})小于0.25赢半    奖金=(本金÷2×赔率)+(本金÷2)",
+            "派奖结果大于或等于1：",
+            "$t(types:type.{{showType}})大于0.25全赢",
+            "$t(types:type.{{showType}})小于0.25全输"
+          ]
+        },
+        {
+          "name": "预设总进球数 0.5：",
+          "detail": [
+            "派奖结果为0：",
+            "$t(types:type.{{showType}})大于0.5全输",
+            "$t(types:type.{{showType}})小于0.5全赢",
+            "派奖结果大于或等于1",
+            "$t(types:type.{{showType}})大于0.5全赢",
+            "$t(types:type.{{showType}})小于0.5全输"
+          ]
+        },
+        {
+          "name": "预设总进球数 0.75 （即0.5/1）：",
+          "detail": [
+            "派奖结果为0：",
+            "$t(types:type.{{showType}})大于0.75全输",
+            "$t(types:type.{{showType}})小于0.75全赢",
+            "派奖结果为1：",
+            "$t(types:type.{{showType}})大于0.75赢半   奖金=(本金÷2×赔率)+(本金÷2)",
+            "$t(types:type.{{showType}})小于0.75退还一半本金（即输半）",
+            "派奖结果大于1：",
+            "$t(types:type.{{showType}})大于0.75全赢",
+            "$t(types:type.{{showType}})小于0.75全输"
+          ]
+        },
+        {
+          "name": "预设总进球数 1：",
+          "detail": [
+            "派奖结果大于1：",
+            "$t(types:type.{{showType}})大于1全赢",
+            "$t(types:type.{{showType}})小于1全输",
+            "派奖结果为1：",
+            "$t(types:type.{{showType}})大于1或小于1均全额退款",
+            "派奖结果小于1：",
+            "$t(types:type.{{showType}})大于1全输",
+            "$t(types:type.{{showType}})小于1全赢"
+          ]
+        }
+      ]
+    },
+    "FTBQC": {
+      "exampleDescript": "主队半场胜平负结果和全场胜平负结果的组合例：上半场赛果为主队胜，且全场赛果为主队胜；则$t(types:type.{{showType}})胜胜全赢，$t(types:type.{{showType}})其它选项全输。",
+      "playNameDescription": [
+        {
+          "name": "注意：",
+          "detail": [
+            "足球比赛对阵顺序为：主队VS客队"
+          ]
+        }
+      ]
+    }
+  },
+  "basketballMapping": {
+    "BSKRFSF": {
+      "exampleDescript": "派奖结果 = 主队最终得分 + 盘口 - 客队最终得分（包含加时赛）",
+      "playNameDescription": [
+        {
+          "name": "如果盘口为-4.5，即主队最终得分 - 4.5 - 客队最终得分",
+          "detail": []
+        },
+        {
+          "name": "如果盘口为+4.5，即主队最终得分 + 4.5 - 客队最终得分",
+          "detail": [
+            "派奖结果主胜，$t(types:type.{{showType}})主队全赢，$t(types:type.{{showType}})客队全输",
+            "派奖结果主负，$t(types:type.{{showType}})主队全输，$t(types:type.{{showType}})客队全赢"
+          ]
+        }
+      ]
+    },
+    "BSKDXF": {
+      "exampleDescript": "派奖结果=主队分数+客队分数（包含加时赛）",
+      "playNameDescription": [
+        {
+          "name": "如果预设结果为200.5：",
+          "detail": [
+            "派奖结果大于200.5:",
+            "$t(types:type.{{showType}})大于200.5全赢",
+            "$t(types:type.{{showType}})小于200.5全输",
+            "派奖结果小于200.5：",
+            "$t(types:type.{{showType}})大于200.5全输",
+            "$t(types:type.{{showType}})小于200.5全赢"
+          ]
+        }
+      ]
+    },
+    "BSKBQC": {
+      "exampleDescript": "主队半场胜平负结果和全场胜负结果的组合 例：上半场赛果为主队胜，且全场赛果为主队胜；则$t(types:type.{{showType}})胜胜全赢，$t(types:type.{{showType}})其它选项全输。",
+      "playNameDescription": [
+        {
+          "name": "注意：",
+          "detail": [
+            "篮球比赛对阵顺序为：客队VS主队"
+          ]
+        }
+      ]
+    }
+  },
+  "oddsChangeText": "该赔率已发生变化",
+  "betButtonText": "$t(types:type.{{showType}})",
+  "betButtonAllText": "All in$t(types:type.{{showType}})",
+  "notSufficientFundsText": "{{coinName}}不足",
+  "betTipText": "可用{{coinName}} {{balance}}",
+  "betButttonDesc": "预计返还 {{forecastSum}}",
+  "betInputLabel": "$t(types:type.{{showType}}){{coinName}}",
+  "numbericKeyBoardSub": "完成",
+  "betInputButtonFullText": "满注{{betLimit}}",
+  "betInputButtonAllText": "All in",
+  "betFullTip": "您将$t(types:type.{{showType}})全部{{coinName}}",
+  "closeModalText": "赛事关盘中{{count}}s",
+  "resultModal": {
+    "success": {
+      "resultMessage": "$t(types:type.{{showType}})已受理，不要忘记比赛结束后回来喔！",
+      "resultTitle": "$t(types:type.{{showType}})成功"
+    },
+    "error": {
+      "resultMessageCode": {
+        "handicapInconformity": "盘口不一致",
+        "notSufficientFunds": "您的{{coinName}}不足，请兑换后再来$t(types:type.{{showType}})～",
+        "handicapClose": "盘口已关闭",
+        "limitValue": "超出口注上限",
+        "oddsVerifyError": "赔率发生变化",
+        "repeatOrder": "订单重复",
+        "accountTypeException": "帐户状态异常",
+        "businessProcessException": "业务处理异常",
+        "defaultErrorText": "请求异常，请重试",
+        "deductErrorText": "消费失败"
+      },
+      "resultTitle": "$t(types:type.{{showType}})未受理"
+    }
+  },
+  "resultButtonGainText": {
+    "handicapInconformity": "重新$t(types:type.{{showType}})",
+    "notSufficientFunds": "获取{{coinName}}",
+    "handicapClose": "重新$t(types:type.{{showType}})",
+    "limitValue": "重新$t(types:type.{{showType}})",
+    "oddsVerifyError": "重新$t(types:type.{{showType}})",
+    "repeatOrder": "重新$t(types:type.{{showType}})",
+    "accountTypeException": "重新$t(types:type.{{showType}})",
+    "businessProcessException": "重新$t(types:type.{{showType}})",
+    "defaultErrorText": "重新$t(types:type.{{showType}})",
+    "deductErrorText": "重新$t(types:type.{{showType}})"
+  },
+  "matchStateOfficial": {
+    "nodata": {
+      "desc": "比赛已停止$t(types:type.{{showType}})，去看看其他赛事吧",
+      "buttonText": "更多赛事"
+    },
+    "handicapStatusClose": {
+      "desc": "比赛已停止$t(types:type.{{showType}})，去看看其他赛事吧",
+      "buttonText": "更多赛事"
+    },
+    "matchOver": {
+      "desc": "比赛已结束啦，去看看其他赛事吧",
+      "buttonText": "更多赛事"
+    }
+  }
+}

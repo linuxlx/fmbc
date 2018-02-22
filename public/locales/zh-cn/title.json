@@ -1,0 +1,4 @@
+{
+    "description":"玩法说明",
+    "orderList":"$t(types:type.{{showType}})记录"
+}

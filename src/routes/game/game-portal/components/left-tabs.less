@@ -1,0 +1,39 @@
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 166px;;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  background-color: #ddd;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .loading {
+    margin: 100px auto 0;
+  }
+
+  li:first-child {
+    border-top: none;
+  }
+
+  li {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+
+    font-size: 22px;
+  }
+
+  li.active {
+    background-color: white;
+    border-right-color: white;
+  }
+}

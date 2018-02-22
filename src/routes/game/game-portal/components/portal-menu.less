@@ -1,0 +1,42 @@
+.wrapper {
+  background-color: white;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 10px 0;
+    min-height: 75px;
+    transition: .3s height;
+    //max-height: 160px;
+    overflow: hidden;
+
+    color: #333333;
+
+    li {
+      height: 50px;
+      margin-bottom: 20px;
+      padding: 0 10px;
+      width: 135px;
+      .item {
+        line-height: 50px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        span {
+          font-size: 20px;
+          line-height: 50px;
+          white-space: pre;
+        }
+      }
+
+      .item.selected {
+        color: white;
+        font-weight: 500;
+        border: 1px solid #ff4747;
+        background-color: #ff4747;
+      }
+    }
+    li.hide {
+      display: none;
+    }
+  }
+}

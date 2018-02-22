@@ -1,0 +1,54 @@
+@import "../../styles/partials/_variables.css";
+@import "../../styles/partials/_mixins.css";
+
+@define-extend inputdefault{
+	position: absolute;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	cursor: inherit;
+	left: 0;
+	top: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+}
+
+.lottery-checkbox{
+	position: relative;
+	& > input{
+		@extend inputdefault;
+	}
+	& > .label{
+		display: flex;
+
+		& > label{
+			display: block;
+			flex: 1;
+		}
+	}
+
+	:global(.fontIcon:first-child){
+		display: inline-block;
+		color: #ccc;
+	}
+
+	:global(.fontIcon:last-child){
+		display: none;
+		color: #e82c2c;
+	}
+
+	&.checked{
+		:global(.fontIcon:first-child){
+			display: none;
+		}
+
+		:global(.fontIcon:last-child){
+			display: inline-block;
+		}
+	}
+	.switch{
+		margin-right: 8px;
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "test": "测试",
+  "mainLayout": {
+    "titlePrefix": "分秒必猜",
+    "title": ""
+  },
+  "titleBar": {
+    "orderRecord": "记录"
+  }
+}

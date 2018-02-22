@@ -1,0 +1,45 @@
+.lottery-numericKeyboard{
+	background-color: #fff;
+	ul{
+		display: flex;
+		li{
+			box-sizing: border-box;
+			flex: 1;
+			border:1px solid #e5e5e5;
+			border-right: none;
+			margin-left: -1px;
+			margin-bottom: -1px;
+			text-align: center;
+      width: 100%;
+			font-size: 50px;
+			color: #666;
+
+			// &:active{
+			// 	background-color: #f0f0f0;
+			// }
+
+			// &.del{
+			// 	background-color: #f0f0f0;
+			// }
+
+			// &.sub{
+			// 	background-color: #eb2822;
+			// 	color: #fff;
+			// }
+
+			& > * {
+				display: block;
+				width: 100%;
+				height: 80px;
+				line-height: 80px;
+			}
+
+      :global{
+        .am-button{
+          border:none;
+          border-radius: 0;
+        }
+      }
+		}
+	}
+}

@@ -1,0 +1,107 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "better-npm-run start",
+    "build:qa": "better-npm-run build:qa",
+    "build:jd": "better-npm-run build:jd",
+    "dont-use-build-qa-no-compress-code": "NODE_ENV_QA='qa' roadhog build",
+    "some-cmd-with-environment-env": "API_HOST='someIp' roadhog build",
+    "lint": "eslint --ext .js src test",
+    "lint:fix": "npm run lint -- --fix",
+    "precommit": "npm run lint"
+  },
+  "betterScripts": {
+    "start": {
+      "command": "roadhog server",
+      "env": {
+        "API_HOST": "http://localhost:8181",
+        "NODE_ENV_QA": "1",
+        "REQUEST_PATH": "/api",
+        "OPEN_ERROR_TYPE": "detail",
+        "CORP_SOURCE": "JD"
+      }
+    },
+    "build:qa": {
+      "command": "roadhog build",
+      "env": {
+        "NODE_ENV": "qa",
+        "API_HOST": "http://localhost:8181",
+        "NODE_ENV_QA": "1",
+        "REQUEST_PATH": "/api",
+        "OPEN_ERROR_TYPE": "simple"
+      }
+    },
+    "build:jd": {
+      "command": "roadhog build",
+      "env": {
+        "NODE_ENV": "production",
+        "API_HOST": "http://localhost:8181",
+        "NODE_ENV_QA": "1",
+        "PUBLIC_PATH": "/roll/",
+        "REQUEST_PATH": "",
+        "OPEN_ERROR_TYPE": "simple",
+        "CORP_SOURCE": "JD"
+      }
+    }
+  },
+  "engines": {
+    "install-node": "6.9.2"
+  },
+  "dependencies": {
+    "antd-mobile": "^1.3.1",
+    "axios": "^0.16.2",
+    "babel-core": "^6.25.0",
+    "babel-runtime": "^6.9.2",
+    "classnames": "^2.2.5",
+    "dotenv": "^4.0.0",
+    "dva": "^1.2.1",
+    "dva-loading": "^0.2.1",
+    "extract-text-webpack-plugin": "1.0.1",
+    "html-webpack-plugin": "^2.30.1",
+    "i18next": "^8.4.2",
+    "i18next-browser-languagedetector": "^2.0.0",
+    "i18next-xhr-backend": "^1.4.2",
+    "isomorphic-fetch": "^2.2.1",
+    "keymaster": "^1.6.2",
+    "localforage": "^1.5.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "numeral": "^2.0.6",
+    "path-to-regexp": "^1.7.0",
+    "postcss-pxtorem": "^4.0.1",
+    "ramda": "^0.24.1",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
+    "react-helmet": "^5.1.3",
+    "react-i18next": "^4.3.0",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux-persist": "^4.8.0",
+    "reselect": "^3.0.1",
+    "roadhog": "^0.6.0-beta3",
+    "webpack-chunk-hash": "^0.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.2.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "better-npm-run": "^0.1.0",
+    "ejs-loader": "^0.3.0",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
+    "expect": "^1.20.2",
+    "expose-loader": "^0.7.3",
+    "html-webpack-plugin": "^2.30.1",
+    "husky": "^0.12.0",
+    "json-loader": "^0.5.4",
+    "react-addons-perf": "^15.4.2",
+    "redbox-react": "^1.3.2",
+    "svg-sprite-loader": "^0.3.1",
+    "webpack-chunk-hash": "^0.4.0",
+    "why-did-you-update": "0.0.8"
+  }
+}

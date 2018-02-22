@@ -1,0 +1,11 @@
+{
+  "contentTitle": {
+    "byTime": "按时间",
+    "byLeague": "按联赛"
+  },
+  "leftTabs": {},
+  "gameList": {
+    "goSitePending": "滚球待开始",
+    "goSiteRolling": "滚球进行中"
+  }
+}
